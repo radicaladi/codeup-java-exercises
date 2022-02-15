@@ -120,14 +120,25 @@ public class HelloWorld {
 ////        y = y * x;
 //        y *= x;
 //        System.out.println(y);
-        int x = 10;
-        int y = 2;
-//        x = x / y;
-        x /= y;
-//        y = y - x;
-        y -= x;
-        System.out.println(x);
-        System.out.println(y);
+//        int x = 10;
+//        int y = 2;
+////        x = x / y;
+//        x /= y;
+////        y = y - x;
+//        y -= x;
+//        System.out.println(x);
+//        System.out.println(y);
+
+        // ex 14:
+        // What happens if you assign a value to a numerical variable that is larger (or smaller) than the type can hold?
+            // notice: a larger data type (ex: long) can hold smaller values (ex: byte) but might not be most efficient in compiling code
+            // notice 2: however a smaller data type (ex: byte) cannot hold a larger value (ex: long); throws lossy error
+
+        // What happens if you increment a numeric variable past the type's capacity?
+        byte overFlowing = 127;
+        overFlowing++;
+        System.out.println(overFlowing);
+            // notice: surprisingly(!), the numeric variable resets to its lowest possible value; -128 in the example above
     }
 }
 
