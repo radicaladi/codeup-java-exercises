@@ -102,12 +102,19 @@ public class HelloWorld {
 //        int three = (int) o;
 //        System.out.println(three);
         // notice: does not match my prediction. throws ClassCastException error: string cannot be cast to int
-        int three = (int) "three";
+//        int three = (int) "three";
         // notice: throws error incompatible types: string cannot be converted to int
 
         // ex 12b:
         // What are the two different types of errors we are observing?
         // notice: 1) ClassCastException error and 2) incompatible types error; both being String and int interchangeability
+
+        // ex 13:
+        // Rewrite each expression using the relevant shorthand assignment operators:
+        int x = 4;
+//        x = x + 5;
+        x += 5;
+        System.out.println(x);
     }
 }
 
