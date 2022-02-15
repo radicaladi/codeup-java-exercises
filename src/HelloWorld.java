@@ -16,7 +16,7 @@ public class HelloWorld {
 
         // ex 1a:
         // print out "Hello, World!" to the console
-        // System.out.println("Hello, World!");
+//        System.out.println("Hello, World!");
         // ex 1b:
         // print the above w/o println
         System.out.print("Hello, ");
@@ -34,15 +34,34 @@ public class HelloWorld {
 
         // ex 3:
         // change your code to assign a character value to myString. What do you notice?
-        char myString = 'l';
-        // notice: cannot assign another value to a variable already defined.
+//        char myString = 'l';
+        // notice: cannot assign another value to a variable already defined
 
         // ex 4:
         // change your code to assign the value '3.1459' to myString. What happens?
-        double myString = 3.1459;
-        /* notice: still cannot assign another value to a variable already defined.
-         * Numbers (decimals?) also appear differently. "double" is intelliJ's suggested type for this sort of decimal.
+//        double myString = 3.1459;
+        /* notice: still cannot assign another value to a variable already defined
+         * Numbers (decimals?) also appear differently. "double" is intelliJ's suggested type for this sort of decimal
          */
+
+        // ex 5:
+        // Declare a long variable named myNumber, but do not assign anything to it
+        // Then try to print out myNumber to the console. What happens?
+//        long myNumber;
+//        System.out.println(myNumber);
+        // notice: it will not initialize without something assigned to it
+
+        // ex 6:
+        // Change your code to assign the value 3.14 to myNumber. What do you notice?
+//        long myNumber = 3.14;
+        // notice: will not initialize, this sort of number is suggested as a "double" type
+
+        // ex 7:
+        // Change your code to assign the value 123L (Note the 'L' at the end) to myNumber
+        long myNumber = 123L;
+        System.out.println(myNumber);
+        // notice: java seems to ignore the L char value with the type "long" when printing to console
+
     }
 }
 
