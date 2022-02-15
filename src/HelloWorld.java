@@ -111,10 +111,15 @@ public class HelloWorld {
 
         // ex 13:
         // Rewrite each expression using the relevant shorthand assignment operators:
-        int x = 4;
+//        int x = 4;
 //        x = x + 5;
-        x += 5;
-        System.out.println(x);
+//        x += 5;
+//        System.out.println(x);
+        int x = 3;
+        int y = 4;
+//        y = y * x;
+        y *= x;
+        System.out.println(y);
     }
 }
 
