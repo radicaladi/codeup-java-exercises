@@ -14,9 +14,13 @@ public class HelloWorld {
         // main – name of our method; keyword that is going to be searched as the entry point
         // String[] args – is passing in a string array that is named args
 
-        // ex 1:
+        // ex 1a:
         // print out "Hello, World!" to the console
-        System.out.println("Hello, World!");
+        // System.out.println("Hello, World!");
+        // ex 1b:
+        // print the above w/o println
+        System.out.print("Hello, ");
+        System.out.print("World");
     }
 }
 
