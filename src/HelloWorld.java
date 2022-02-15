@@ -20,7 +20,12 @@ public class HelloWorld {
         // ex 1b:
         // print the above w/o println
         System.out.print("Hello, ");
-        System.out.print("World");
+        System.out.print("World!");
+
+        // syntax ex 1a:
+        // create int type variable named myFavoriteNumber; assign favorite number and print
+        int myFavoriteNumber = 12;
+        System.out.println(myFavoriteNumber);
     }
 }
 
