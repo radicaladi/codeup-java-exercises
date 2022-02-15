@@ -54,14 +54,58 @@ public class HelloWorld {
         // ex 6:
         // Change your code to assign the value 3.14 to myNumber. What do you notice?
 //        long myNumber = 3.14;
-        // notice: will not initialize, this sort of number is suggested as a "double" type
+        // notice: will not initialize, this sort of number is suggested by IntelliJ as a "double" type
 
         // ex 7:
         // Change your code to assign the value 123L (Note the 'L' at the end) to myNumber
-        long myNumber = 123L;
-        System.out.println(myNumber);
+//        long myNumber = 123L;
+//        System.out.println(myNumber);
         // notice: java seems to ignore the L char value with the type "long" when printing to console
 
+        // ex 8:
+        // Change your code to assign the value 123 to myNumber
+//        byte myNumber = 123;
+//        System.out.println(myNumber);
+        // Why does assigning the value 3.14 to a variable declared as a long not compile, but assigning an integer value does?
+        // notice: prints the assigned without issue
+        // answer: because decimal values require a different data type in Java language; double or float
+
+        // ex: 9
+        // Change your code to declare myNumber as a float. Assign the value 3.14 to it
+        // What happens? What are two ways we could fix this?
+//        float myNumber = 3.14;
+        // notice: float won't take this level of decimal vale
+        // can fix by changing data type to "double"
+
+        // ex: 10
+        // Copy and paste the code blocks one at a time and execute them
+//        int x = 5;
+//        System.out.println(x++);
+//        System.out.println(x);
+        int x = 5;
+        System.out.println(++x);
+        System.out.println(x);
+        //What is the difference between the above code blocks? Explain why the code outputs what it does
+        // notice: first code block increments 1 on the next call of the int x
+        // notice 2: second code block increments to the value of int x upon initializing it but not on next calls
     }
 }
 
+// REMINDERS:
+// int –> primitive type/ not an object
+// Integer –> is an object / gives us access to manipulate the Integer as an object
+
+// double –> primitive
+// Double –> object
+
+// char –> primitive
+// Character –> object
+
+// double for everything?
+    // No! Because it will affect how quickly the program runs
+    // use correct data type to max efficiency
+
+// Strings are not a primitive data type in Java
+    // contrast to js which is primitive
+
+// if Capitalized –> is an Object
