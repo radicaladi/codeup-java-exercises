@@ -94,6 +94,20 @@ public class HelloWorld {
 //        byte class = 2;
         // notice: IntelliJ is expecting an identifier. can't use the reserved word for a variable name
 
+        // ex 12a:
+        // Object is the most generic type in Java. You can assign any value to a variable of type Object.
+        // What do you think will happen when the following code is run?
+        // prediction: it will store the value "three" int the int three.
+//        Object o = "three";
+//        int three = (int) o;
+//        System.out.println(three);
+        // notice: does not match my prediction. throws ClassCastException error: string cannot be cast to int
+        int three = (int) "three";
+        // notice: throws error incompatible types: string cannot be converted to int
+
+        // ex 12b:
+        // What are the two different types of errors we are observing?
+        // notice: 1) ClassCastException error and 2) incompatible types error; both being String and int interchangeability
     }
 }
 
