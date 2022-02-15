@@ -82,12 +82,18 @@ public class HelloWorld {
 //        int x = 5;
 //        System.out.println(x++);
 //        System.out.println(x);
-        int x = 5;
-        System.out.println(++x);
-        System.out.println(x);
+//        int x = 5;
+//        System.out.println(++x);
+//        System.out.println(x);
         //What is the difference between the above code blocks? Explain why the code outputs what it does
         // notice: first code block increments 1 on the next call of the int x
         // notice 2: second code block increments to the value of int x upon initializing it but not on next calls
+
+        // ex 11:
+        // Try to create a variable named class. What happens?
+//        byte class = 2;
+        // notice: IntelliJ is expecting an identifier. can't use the reserved word for a variable name
+
     }
 }
 
