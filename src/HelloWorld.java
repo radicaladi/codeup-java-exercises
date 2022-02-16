@@ -76,6 +76,7 @@ public class HelloWorld {
 //        float myNumber = 3.14;
         // notice: float won't take this level of decimal vale
         // can fix by changing data type to "double"
+        // notice 2: can work by adding 'f' to end of number: 3.14f
 
         // ex: 10
         // Copy and paste the code blocks one at a time and execute them
