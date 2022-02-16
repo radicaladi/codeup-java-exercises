@@ -2,6 +2,7 @@ import java.util.Scanner;
 
 public class ConsoleExercises {
     public static void main (String[] args) {
+        // ex 1a:
         double pi = 3.14159;
         System.out.printf("The value of pi is approximately, %s. %n", pi);
 
@@ -43,10 +44,26 @@ public class ConsoleExercises {
         // Do you capture all the words?
         // ans: No. The String variable using scanner.next() won't capture any word after the whitespace of the first word.
 
+        // ex 4b:
         // Rewrite the above example using the nextLine method.
-        System.out.println("Type a sentence: ");
-        String userSentence = scanner.nextLine();
+//        System.out.println("Type a sentence: ");
+//        String userSentence = scanner.nextLine();
+//
+//        System.out.println(userSentence);
 
-        System.out.println(userSentence);
+        // ex 1c:
+        // Prompt the user to enter values of length and width of their room.
+        System.out.println("Enter the length of your room: ");
+        String userRoomLength = scanner.nextLine();
+        double userRoomLengthParsed = Double.parseDouble(userRoomLength);
+
+        System.out.println("Now enter the width of your room: ");
+        String userRoomWidth = scanner.nextLine();
+        double userRoomWidthParsed = Double.parseDouble(userRoomWidth);
+
+
+//14.39 ft x 14.39 ft (L x W)
+        System.out.printf("the area of your room is: %s square feet. %n", (userRoomLengthParsed * userRoomWidthParsed));
+        System.out.printf("the perimeter of your room is: %s feet. %n", ((userRoomLengthParsed * 2) + (userRoomWidthParsed * 2)));
     }
 }
