@@ -61,66 +61,73 @@ public class ControlFlowExercises {
         // ex 3: DISPLAY A TABLE OF POWERS
         Scanner scanner = new Scanner(System.in);
 //
-//        System.out.println("Enter an integer for your table of squares: ");
-//        int userInput = scanner.nextInt();
-//        System.out.printf("your number is: %s.%n", userInput);
-//
-//        for (int i = 1; i <= userInput; i++) {
-//            Formatter format = new Formatter();
-//            format.format("%4d %4d %4d", i, i * i, i * i * i);
-//            System.out.println(format);
-//            }
-//        System.out.println("Would you like to continue?: [y/N]");
-//        String userChoice = null;
-//        userChoice = scanner.next();
-//        if (Objects.equals(userChoice, "y")) {
-//            System.out.println("Let's continue...");
-//        } else if (Objects.equals(userChoice, "N")) {
-//            System.out.println("Okay then... We'll stop here.");
-//        }
+        String userChoice;
+        do {
+            System.out.println("Enter an integer for your table of squares: ");
+            int userInput = scanner.nextInt();
+            System.out.printf("your number is: %s.%n", userInput);
+
+            for (int i = 1; i <= userInput; i++) {
+                Formatter format = new Formatter();
+                format.format("%4d %4d %4d", i, i * i, i * i * i);
+                System.out.println(format);
+            }
+
+            System.out.println("Would you like to continue?: [y/N]");
+            userChoice = scanner.next();
+
+        } while (userChoice.equals("y"));
+
+        if (userChoice.equals("n")) {
+            System.out.println("Okay, that's enough for today...");
+        }
 
         // ex 4: CONVERT GIVEN NUMBER GRADES INTO LETTER GRADES
 
-        System.out.println("Enter a number 0-100: ");
-        int studentScore = scanner.nextInt();
-        System.out.println("number input is: " + studentScore);
-        String grade;
+        String answer;
+        do {
+            System.out.println("Enter a number 0-100: ");
+            int studentScore = scanner.nextInt();
+            System.out.println("number input is: " + studentScore);
 
-        switch (studentScore/10) {
-            case 10:
-                grade = "A+!";
-                break;
-            case 9:
-                grade = "A!";
-                break;
-            case 8:
-                grade = "B!";
-                break;
-            case 7:
-                grade = "C!";
-                break;
-            case 6:
-                grade = "D!";
-                break;
-            default:
-                grade = "F!";
-                break;
-        }
-        System.out.println("Your grade is: " + grade);
-        System.out.println("Would you like to continue?: [y/N]");
-        String answer = scanner.next().toLowerCase(Locale.ROOT);
-        if (answer.equals("y")) {
-            System.out.println("Okay, let's continue...");
-        } else if (answer.equals("n")) {
+            String grade;
+
+            switch (studentScore / 10) {
+                case 10:
+                    grade = "A+!";
+                    break;
+                case 9:
+                    grade = "A!";
+                    break;
+                case 8:
+                    grade = "B!";
+                    break;
+                case 7:
+                    grade = "C!";
+                    break;
+                case 6:
+                    grade = "D!";
+                    break;
+                default:
+                    grade = "F!";
+                    break;
+
+            }
+            System.out.println("Your grade is: " + grade);
+            System.out.println("Would you like to continue?: [y/N]");
+            answer = scanner.next();
+        } while (answer.equals("y"));
+
+        if (answer.equals("n")) {
             System.out.println("Okay, we'll stop here...");
         }
-    }
+
+    } // <--------- end of main
+} // <--------- end of class
 
 
 
-}
-
-//        NOTES ON LOOPS
+// ---------->  NOTES ON LOOPS  <----------
 //        for(int i = 0; i <= 10; i++){
 //            System.out.println("i is at: " + i);
 //        }
