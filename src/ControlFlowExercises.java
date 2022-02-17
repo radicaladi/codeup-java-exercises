@@ -1,11 +1,11 @@
 public class ControlFlowExercises {
     public static void main(String[] args) {
-        int i = 5;
-        while (i <= 15) {
-            System.out.println("this is i at: " + i);
-            i++;
-        }
-        System.out.println("----------");
+//        int i = 5;
+//        while (i <= 15) {
+//            System.out.println("this is i at: " + i);
+//            i++;
+//        }
+//        System.out.println("----------");
 
 //        long j = 2;
 //        do {
@@ -21,12 +21,36 @@ public class ControlFlowExercises {
 //            j*=j;
 //        } while (j < 1000000); // notice: for this volume of number, you have to change type of the variable to correct parameters.
 
-        for (int j = 100; j >= -10; j-=5 ) {
-            System.out.println("j is at: " + j);
-        }
-        System.out.println("----------> break <--------");
-        for (long j = 2; j < 1000000; j*=j) {
-            System.out.println("j is at: " + j);
+//        for (int j = 100; j >= -10; j-=5 ) {
+//            System.out.println("j is at: " + j);
+//        }
+//        System.out.println("----------> break <--------");
+//        for (long j = 2; j < 1000000; j*=j) {
+//            System.out.println("j is at: " + j);
+//        }
+
+        // FIZZBUZZ
+        /*One of the most common interview questions for entry-level programmers is the FizzBuzz test.
+        Developed by Imran Ghory, the test is designed to assess basic looping and conditional logic skills.
+
+        Write a program that prints the numbers from 1 to 100.
+        For multiples of three: print “Fizz” instead of the number.
+        For the multiples of five: print “Buzz”.
+        For numbers which are multiples of both three and five: print “FizzBuzz”.
+
+         */
+        int i = 0;
+        for (i = 0; i <= 100; i++){
+            if (i % 3 == 0 && i % 5 == 0) {
+                System.out.println("FizzBuzz");
+            }
+            else if (i % 3 == 0) {
+                System.out.println("Fizz");
+            }
+            else if (i % 5 == 0) {
+                System.out.println("Buzz");
+            }
+            System.out.println(i);
         }
 
 
