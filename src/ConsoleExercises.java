@@ -65,5 +65,11 @@ public class ConsoleExercises {
 //14.39 ft x 14.39 ft (L x W)
         System.out.printf("the area of your room is: %.3s square feet. %n", (userRoomLengthParsed * userRoomWidthParsed));
         System.out.printf("the perimeter of your room is: %.4s feet. %n", ((userRoomLengthParsed * 2) + (userRoomWidthParsed * 2)));
+
+        System.out.println("Enter the height of your room: ");
+//7.195 ft (H)
+        String userRoomHeight = scanner.nextLine();
+        double userRoomHeightParsed = Double.parseDouble(userRoomHeight);
+        System.out.printf("the volume of your room is: %.4s cubic feet. %n", (userRoomHeightParsed * userRoomLengthParsed * userRoomWidthParsed));
     }
 }
