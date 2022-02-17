@@ -4,7 +4,7 @@ public class ConsoleExercises {
     public static void main (String[] args) {
         // ex 1a:
         double pi = 3.14159;
-        System.out.printf("The value of pi is approximately, %s. %n", pi);
+        System.out.printf("The value of pi is approximately, %.4s %n", pi); // decimal 4s after modulus take 4 spaces of integer.
 
         Scanner scanner = new Scanner(System.in);
 
@@ -63,7 +63,7 @@ public class ConsoleExercises {
 
 
 //14.39 ft x 14.39 ft (L x W)
-        System.out.printf("the area of your room is: %s square feet. %n", (userRoomLengthParsed * userRoomWidthParsed));
-        System.out.printf("the perimeter of your room is: %s feet. %n", ((userRoomLengthParsed * 2) + (userRoomWidthParsed * 2)));
+        System.out.printf("the area of your room is: %.3s square feet. %n", (userRoomLengthParsed * userRoomWidthParsed));
+        System.out.printf("the perimeter of your room is: %.4s feet. %n", ((userRoomLengthParsed * 2) + (userRoomWidthParsed * 2)));
     }
 }
