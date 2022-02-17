@@ -5,6 +5,31 @@ public class ControlFlowExercises {
             System.out.println("this is i at: " + i);
             i++;
         }
+        System.out.println("----------");
+
+//        long j = 2;
+//        do {
+//            System.out.println("this is j at: " + j);
+//            j+=2;
+//        } while (j <= 100);
+//        do {
+//            System.out.println("this is j at: " + j);
+//            j-=5;
+//        } while (j >= -10);
+//        do {
+//            System.out.println("this is j at: " + j);
+//            j*=j;
+//        } while (j < 1000000); // notice: for this volume of number, you have to change type of the variable to correct parameters.
+
+        for (int j = 100; j >= -10; j-=5 ) {
+            System.out.println("j is at: " + j);
+        }
+        System.out.println("----------> break <--------");
+        for (long j = 2; j < 1000000; j*=j) {
+            System.out.println("j is at: " + j);
+        }
+
+
 
 
 
