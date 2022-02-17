@@ -1,3 +1,6 @@
+import java.util.Scanner;
+import java.util.Formatter;
+
 public class ControlFlowExercises {
     public static void main(String[] args) {
 //        int i = 5;
@@ -39,24 +42,34 @@ public class ControlFlowExercises {
         For numbers which are multiples of both three and five: print “FizzBuzz”.
 
          */
-        int i = 0;
-        for (i = 0; i <= 100; i++){
-            if (i % 3 == 0 && i % 5 == 0) {
-                System.out.println("FizzBuzz");
-            }
-            else if (i % 3 == 0) {
-                System.out.println("Fizz");
-            }
-            else if (i % 5 == 0) {
-                System.out.println("Buzz");
-            }
-            System.out.println(i);
+//        int i = 0;
+//        for (i = 0; i <= 100; i++){
+//            if (i % 3 == 0 && i % 5 == 0) {
+//                System.out.println("FizzBuzz");
+//            }
+//            else if (i % 3 == 0) {
+//                System.out.println("Fizz");
+//            }
+//            else if (i % 5 == 0) {
+//                System.out.println("Buzz");
+//            }
+//            System.out.println(i);
+//        }
+
+        // Display a table of powers
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Enter an integer for your table of squares: ");
+        int userInput = scanner.nextInt();
+        System.out.printf("your number is: %s.%n", userInput);
+
+
+
+        for (int i = 1; i <= userInput; i++) {
+            Formatter format = new Formatter();
+            format.format("%4d %4d %4d", i, i * i, i * i * i);
+            System.out.println(format);
         }
-
-
-
-
-
 
 //        NOTES ON LOOPS
 //        for(int i = 0; i <= 10; i++){
