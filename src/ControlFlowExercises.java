@@ -1,3 +1,4 @@
+import java.util.Objects;
 import java.util.Scanner;
 import java.util.Formatter;
 
@@ -63,12 +64,18 @@ public class ControlFlowExercises {
         int userInput = scanner.nextInt();
         System.out.printf("your number is: %s.%n", userInput);
 
-
-
         for (int i = 1; i <= userInput; i++) {
             Formatter format = new Formatter();
             format.format("%4d %4d %4d", i, i * i, i * i * i);
             System.out.println(format);
+            }
+        System.out.println("Would you like to continue?: [y/N]");
+        String userChoice = null;
+        userChoice = scanner.next();
+        if (Objects.equals(userChoice, "y")) {
+            System.out.println("Let's continue...");
+        } else if (Objects.equals(userChoice, "N")) {
+            System.out.println("Okay then... We'll stop here.");
         }
 
 //        NOTES ON LOOPS
