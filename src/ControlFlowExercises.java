@@ -84,7 +84,7 @@ public class ControlFlowExercises {
         System.out.println("Enter a number 0-100: ");
         int studentScore = scanner.nextInt();
         System.out.println("number input is: " + studentScore);
-        String grade = null;
+        String grade;
 
         switch (studentScore/10) {
             case 10:
