@@ -1,3 +1,4 @@
+import java.util.Locale;
 import java.util.Objects;
 import java.util.Scanner;
 import java.util.Formatter;
@@ -33,7 +34,7 @@ public class ControlFlowExercises {
 //            System.out.println("j is at: " + j);
 //        }
 
-        // FIZZBUZZ
+        // ex 2: FIZZBUZZ
         /*One of the most common interview questions for entry-level programmers is the FizzBuzz test.
         Developed by Imran Ghory, the test is designed to assess basic looping and conditional logic skills.
 
@@ -57,26 +58,67 @@ public class ControlFlowExercises {
 //            System.out.println(i);
 //        }
 
-        // Display a table of powers
+        // ex 3: DISPLAY A TABLE OF POWERS
         Scanner scanner = new Scanner(System.in);
+//
+//        System.out.println("Enter an integer for your table of squares: ");
+//        int userInput = scanner.nextInt();
+//        System.out.printf("your number is: %s.%n", userInput);
+//
+//        for (int i = 1; i <= userInput; i++) {
+//            Formatter format = new Formatter();
+//            format.format("%4d %4d %4d", i, i * i, i * i * i);
+//            System.out.println(format);
+//            }
+//        System.out.println("Would you like to continue?: [y/N]");
+//        String userChoice = null;
+//        userChoice = scanner.next();
+//        if (Objects.equals(userChoice, "y")) {
+//            System.out.println("Let's continue...");
+//        } else if (Objects.equals(userChoice, "N")) {
+//            System.out.println("Okay then... We'll stop here.");
+//        }
 
-        System.out.println("Enter an integer for your table of squares: ");
-        int userInput = scanner.nextInt();
-        System.out.printf("your number is: %s.%n", userInput);
+        // ex 4: CONVERT GIVEN NUMBER GRADES INTO LETTER GRADES
 
-        for (int i = 1; i <= userInput; i++) {
-            Formatter format = new Formatter();
-            format.format("%4d %4d %4d", i, i * i, i * i * i);
-            System.out.println(format);
-            }
-        System.out.println("Would you like to continue?: [y/N]");
-        String userChoice = null;
-        userChoice = scanner.next();
-        if (Objects.equals(userChoice, "y")) {
-            System.out.println("Let's continue...");
-        } else if (Objects.equals(userChoice, "N")) {
-            System.out.println("Okay then... We'll stop here.");
+        System.out.println("Enter a number 0-100: ");
+        int studentScore = scanner.nextInt();
+        System.out.println("number input is: " + studentScore);
+        String grade = null;
+
+        switch (studentScore/10) {
+            case 10:
+                grade = "A+!";
+                break;
+            case 9:
+                grade = "A!";
+                break;
+            case 8:
+                grade = "B!";
+                break;
+            case 7:
+                grade = "C!";
+                break;
+            case 6:
+                grade = "D!";
+                break;
+            default:
+                grade = "F!";
+                break;
         }
+        System.out.println("Your grade is: " + grade);
+        System.out.println("Would you like to continue?: [y/N]");
+        String answer = scanner.next().toLowerCase(Locale.ROOT);
+        if (answer.equals("y")) {
+            System.out.println("Okay, let's continue...");
+        } else if (answer.equals("n")) {
+            System.out.println("Okay, we'll stop here...");
+        }
+    }
+
+
+
+}
 
 //        NOTES ON LOOPS
 //        for(int i = 0; i <= 10; i++){
@@ -94,5 +136,3 @@ public class ControlFlowExercises {
 //            System.out.println("i is at: " + i);
 //            i++;
 //        } while (i< 10);
-    }
-}
