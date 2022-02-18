@@ -5,7 +5,8 @@ public class MethodsExercises {
     public static void main(String[] args) {
 //        System.out.println(userName());
 //        System.out.println(newAddition());
-        System.out.println(addition(5, 3));
+//        System.out.println(addition(5, 3));
+        System.out.println(addition(5, 9));
         System.out.println(subtraction(5, 3));
         System.out.println(multiplication(5, 3));
         System.out.println(division(5, 3));
@@ -23,15 +24,18 @@ public class MethodsExercises {
     // Basic Arithmetic
 
     public static int addition(int number1, int number2) {
-        return number1 + number2;
+        int solution = number1 + number2;
+        return solution;
     }
-//    public static int newAddition(){
-//        Scanner scanner = new Scanner(System.in);
-//        System.out.println("Enter two numbers: ");
-//        int num1 = scanner.nextInt();
-//        int num2 = scanner.nextInt();
-//        return num1 + num2;
-//    }
+    // creating method overload with addition method
+    public static int addition(){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter two numbers: ");
+        int num1 = scanner.nextInt();
+        int num2 = scanner.nextInt();
+        return num1 + num2;
+    }
+
     public static int subtraction(int number1, int number2) {
         return number1 - number2;
     }
