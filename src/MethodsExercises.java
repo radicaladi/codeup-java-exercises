@@ -1,6 +1,9 @@
+import java.util.Scanner;
+
+
 public class MethodsExercises {
     public static void main(String[] args) {
-        System.out.println(userName("Adi"));
+        System.out.println(userName());
         System.out.println(addition(5, 3));
         System.out.println(subtraction(5, 3));
         System.out.println(multiplication(5, 3));
@@ -9,7 +12,10 @@ public class MethodsExercises {
     }
 
     // class mini ex:
-    public static String userName(String user){
+    public static String userName(){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("What is your first name?: ");
+        String user = scanner.next();
         return "Hello, " + user;
     }
 
