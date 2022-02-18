@@ -92,4 +92,18 @@ public class MethodsExercises {
         }
     }
 
+    // exercise 4:
+    // Create an application that simulates dice rolling
+
+    public static void dice () {
+        Scanner value = new Scanner(System.in);
+        System.out.println("Enter number of sides for pair of dice: ");
+        int sidesOnDice = value.nextInt();
+        System.out.println("Roll dice: [y/N]");
+        String rollEm = value.nextLine();
+        if (rollEm.equals("y")){
+
+        }
+    }
+
 }
