@@ -74,15 +74,16 @@ public class MethodsExercises {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter a number from 1-10: ");
         int nummer = scanner.nextInt();
-        int i,fact=1;
-        for(i=1;i<=nummer;i++){
-            fact=fact*i;
+        if (nummer <= 10 & nummer >=1){
+            long factorial = 1;
+            for(int i = 1; i <= nummer; i++){
+                factorial = factorial * i;
+            }
+            System.out.println("Factorial of " + nummer + " is: " + factorial);
         }
-        System.out.println("Factorial of "+nummer+" is: "+fact);
-
         Scanner scrape = new Scanner(System.in);
-        System.out.print("Would you like to continue?: [y/N]");
-        String antwort = scrape.nextLine().toLowerCase(Locale.ROOT);
+        System.out.println("Would you like to continue?: [y/N]");
+        String antwort = scrape.next().toLowerCase(Locale.ROOT);
 
         if (antwort.equals("y")) {
             factorials();
