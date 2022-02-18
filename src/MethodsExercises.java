@@ -1,3 +1,4 @@
+import java.util.Locale;
 import java.util.Scanner;
 
 
@@ -12,7 +13,8 @@ public class MethodsExercises {
 //        System.out.println(division(5, 3));
 //        System.out.println(modulus(5, 3));
 
-        validator();
+//        validator();
+        factorials();
     }
 
     // class mini ex:
@@ -64,6 +66,29 @@ public class MethodsExercises {
         }
         System.out.println("Invalid!");
         validator();
+    }
+
+    // exercise 3:
+    // Calculate the factorial of a number
+    public static void factorials() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter a number from 1-10: ");
+        int nummer = scanner.nextInt();
+        int i,fact=1;
+        for(i=1;i<=nummer;i++){
+            fact=fact*i;
+        }
+        System.out.println("Factorial of "+nummer+" is: "+fact);
+
+        Scanner scrape = new Scanner(System.in);
+        System.out.print("Would you like to continue?: [y/N]");
+        String antwort = scrape.nextLine().toLowerCase(Locale.ROOT);
+
+        if (antwort.equals("y")) {
+            factorials();
+        } else if (antwort.equals("n")) {
+            System.out.println("okay, that's enough for now...");
+        }
     }
 
 }
