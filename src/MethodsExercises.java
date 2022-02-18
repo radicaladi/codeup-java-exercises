@@ -6,11 +6,13 @@ public class MethodsExercises {
 //        System.out.println(userName());
 //        System.out.println(newAddition());
 //        System.out.println(addition(5, 3));
-        System.out.println(addition(5, 9));
-        System.out.println(subtraction(5, 3));
-        System.out.println(multiplication(5, 3));
-        System.out.println(division(5, 3));
-        System.out.println(modulus(5, 3));
+//        System.out.println(addition(5, 9));
+//        System.out.println(subtraction(5, 3));
+//        System.out.println(multiplication(5, 3));
+//        System.out.println(division(5, 3));
+//        System.out.println(modulus(5, 3));
+
+        validator();
     }
 
     // class mini ex:
@@ -49,5 +51,19 @@ public class MethodsExercises {
         return number1 % number2;
     }
 
+    // exercise 2:
+    // Create a method that validates that user input is in a certain range
+    public static void validator() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter two numbers: ");
+        int uno = scanner.nextInt();
+        int dos = scanner.nextInt();
+        if (uno >= 1 & uno <= 10 && dos <= 10 & dos >= 1) {
+            System.out.println("Entries are within parameters!");
+            return;
+        }
+        System.out.println("Invalid!");
+        validator();
+    }
 
 }
