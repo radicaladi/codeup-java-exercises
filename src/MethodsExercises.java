@@ -14,7 +14,8 @@ public class MethodsExercises {
 //        System.out.println(modulus(5, 3));
 
 //        validator();
-        factorials();
+//        factorials();
+        chooseDice();
     }
 
     // class mini ex:
@@ -31,8 +32,9 @@ public class MethodsExercises {
         int solution = number1 + number2;
         return solution;
     }
+
     // creating method overload with addition method
-    public static int addition(){
+    public static int addition() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter two numbers: ");
         int num1 = scanner.nextInt();
@@ -43,12 +45,15 @@ public class MethodsExercises {
     public static int subtraction(int number1, int number2) {
         return number1 - number2;
     }
+
     public static int multiplication(int number1, int number2) {
         return number1 * number2;
     }
+
     public static int division(int number1, int number2) {
         return number1 / number2;
     }
+
     public static int modulus(int number1, int number2) {
         return number1 % number2;
     }
@@ -75,15 +80,16 @@ public class MethodsExercises {
         System.out.println("Enter a number from 1-10: ");
         int nummer = scanner.nextInt();
         // arithmetic starts
-        if (nummer <= 10 & nummer >=1){
+        if (nummer <= 10 & nummer >= 1) {
             long factorial = 1;
-            for(int i = 1; i <= nummer; i++){
+            for (int i = 1; i <= nummer; i++) {
                 factorial = factorial * i;
             }
             System.out.println(nummer + "!" + " = " + factorial);
             recursion();
         }
     }
+
     public static void recursion() {
         Scanner scrape = new Scanner(System.in);
         System.out.println("Would you like to continue?: [y/N]");
@@ -97,16 +103,39 @@ public class MethodsExercises {
 
     // exercise 4:
     // Create an application that simulates dice rolling
+    /*
+        Ask the user to enter the number of sides for a pair of dice. ✅
+        Prompt the user to roll the dice. ✅
+        "Roll" two n-sided dice, display the results of each, and then ask the user if he/she wants to roll the dice again.
+        Use static methods to implement the method(s) that generate the random numbers.
+        Use the .random method of the java.lang.Math class to generate random numbers.
+    */
 
-    public static void dice () {
-        Scanner value = new Scanner(System.in);
-        System.out.println("Enter number of sides for pair of dice: ");
-        int sidesOnDice = value.nextInt();
-        System.out.println("Roll dice: [y/N]");
-        String rollEm = value.nextLine();
-        if (rollEm.equals("y")){
+        public static void chooseDice() {
+            Scanner scanner = new Scanner(System.in);
+            System.out.println("Choose number of sides on dice: ");
+            int n = scanner.nextInt();
 
+            Scanner scanned = new Scanner(System.in);
+            System.out.println("Throw dice?: [y/N]");
+            String response = scanned.nextLine();
+
+            if (response.equals("y")){
+                int index = 0;
+                do {
+                index = (int) Math.floor((n * Math.random() + 1) * 2);
+                System.out.println(index);
+                }
+                while (index != n); // stops rolling dice when index = sides chosen
+                // note: if playing craps then index != 2, 3, or 12 would mean you lose
+                // note 2: if playing craps then a 7 or 11 means you win
+
+            } else if (response.equals("n")) {
+                System.out.println("This table is for high stakes only...");
+            }
         }
-    }
+        // note 3: how would you limit rolls to 2 attempts only?
 
-}
+
+
+    } // <---------- end of class
