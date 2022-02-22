@@ -18,13 +18,12 @@ public class HighLow {
 
     public static void numberGenerator () {
         int numberToGuess = (int) Math.floor(100 * Math.random() + 1);
-        System.out.println(numberToGuess); // confirm working at this point
         Scanner castNet = new Scanner(System.in);
-        int userGuess; // put variable outside of loop to make it work
+        int userGuess;
+        int guessCntr = 0;
         do {
             System.out.println("Guess a number 1-100: ");
             userGuess = castNet.nextInt();
-            System.out.println("Your guess is, " + userGuess); // confirm working at this point
 
             if ( userGuess == numberToGuess ) {
                 System.out.println("Woah! You guessed the right number! GOOD GUESS!");
@@ -32,12 +31,20 @@ public class HighLow {
             }
             else if ( userGuess < numberToGuess ) {
                 System.out.println("hint: HIGHER");
+                guessCntr++;
+                System.out.println("guess tally of 10: " + guessCntr);
             }
             else if ( userGuess > numberToGuess ) {
                 System.out.println("hint: LOWER");
+                guessCntr++;
+                System.out.println("guess tally of 10: " + guessCntr);
             }
         }
-        while ( userGuess != numberToGuess);
+        while ( userGuess != numberToGuess & guessCntr < 10);
+
+        if ( guessCntr == 10 ) {
+            System.out.println("Oof! You've reached maximum tries. Tough luck...\nThe number to guess was " + numberToGuess + ".\nTry again next time...");
+        }
     }
 
 
