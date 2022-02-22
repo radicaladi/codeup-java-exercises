@@ -28,10 +28,16 @@ public class Input {
         return scanner.nextInt();
     }
     public double getDouble (double min, double max) {
-
+        double input;
+        do {
+            System.out.printf("Enter a decimal number between %s and %s: ", min, max);
+            input = scanner.nextDouble();
+        }
+        while ( input < min || input > max);
+        return input;
     }
     public double getDouble (){
-
+        return scanner.nextDouble();
     }
 
 }
