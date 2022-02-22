@@ -10,12 +10,30 @@ public class Person {
     public String sayHello(){
         return String.format("Hello from %s!", name);
     }
+    public Person(String name){
+        this.name = name;
+    }
 
     public static void main(String[] args) {
-        Person phil = new Person();
+        Person phil = new Person("Phil");
         phil.setName("Phil");
         System.out.println(phil.sayHello());
         System.out.println(phil.getName());
+        System.out.println();
+//        Person person1 = new Person("John");
+//        Person person2 = new Person("John");
+//        System.out.println(person1.getName().equals(person2.getName())); // note: this means the names are assigned the same value
+//        System.out.println(person1 == person2); // note: false because the two instances are uniquely separate
+//        Person person1 = new Person("John");
+//        Person person2 = person1;
+//        System.out.println(person1 == person2); // note: true because person2 is assigned person1
+        Person person1 = new Person("John");
+        Person person2 = person1;
+        System.out.println(person1.getName());
+        System.out.println(person2.getName());
+        person2.setName("Jane");
+        System.out.println(person1.getName());
+        System.out.println(person2.getName()); // confusing but I believe it is because person 2 is assigned person 1 and thus anything set to either will set to the other
     }
 
 }
