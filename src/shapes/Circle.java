@@ -6,4 +6,14 @@ public class Circle {
     public Circle (double radius){
         this.radius = radius;
     }
+
+    public double getArea() {
+        return Math.pow(radius, 2) * Math.PI;
+    }
+
+    public double getCircumference() {
+        return 2 * radius * Math.PI;
+    }
+
+
 }
