@@ -1,42 +1,48 @@
 package util;
+
 import java.util.Scanner;
 
 public class Input {
     private Scanner scanner;
 
-    public Input (){
-        Scanner scanner = new Scanner(System.in);
+    public Input() {
+        this.scanner = new Scanner(System.in);
     }
 
-    public String getString() {
+    public String getString(String s) {
         return scanner.next();
     }
-    public boolean yesNo (){
+
+    public boolean yesNo() {
         String input = scanner.next();
         return input.equalsIgnoreCase("yes") || input.equalsIgnoreCase("y");
     }
-    public int getInt (int min, int max){
+
+    public int getInt(int min, int max) {
         int input;
         do {
             System.out.printf("Enter a number between %s and %s: ", min, max);
             input = scanner.nextInt();
         }
-        while ( input < min || input > max);
+        while (input < min || input > max);
         return input;
     }
-    public int getInt (){
+
+    public int getInt() {
         return scanner.nextInt();
     }
-    public double getDouble (double min, double max) {
+
+    public double getDouble(double min, double max) {
         double input;
         do {
             System.out.printf("Enter a decimal number between %s and %s: ", min, max);
             input = scanner.nextDouble();
         }
-        while ( input < min || input > max);
+        while (input < min || input > max);
         return input;
     }
-    public double getDouble (){
+
+    public double getDouble() {
         return scanner.nextDouble();
     }
 
