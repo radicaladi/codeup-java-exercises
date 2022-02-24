@@ -1,17 +1,18 @@
 import java.util.Arrays;
 
 public class ArraysExercises {
-    public void Person (String name) {
-        System.out.println("Name is: " + name);
-    }
     public static void main(String[] args) {
-        Person a = new Person("Anton");
-        Person b = new Person("Barry");
-        Person c = new Person("Cory");
+        int[] numbers = {1, 2, 3, 4, 5};
+        System.out.println(Arrays.toString(numbers));
 
-        String[] persons = { a, b, c};
+        Person Amy = new Person("Amy");
+        Person Barry = new Person("Barry");
+        Person Cory = new Person("Cory");
 
-//        int[] numbers = {1, 2, 3, 4, 5};
-//        System.out.println(Arrays.toString(numbers));
+        String[] persons = {Amy.getName(), Barry.getName(), Cory.getName()};
+//        System.out.println(Arrays.toString(persons)); // testing
+        for (int i = 0; i < persons.length; i += 1) {
+            System.out.println(persons[i]);
+        }
     }
 }
