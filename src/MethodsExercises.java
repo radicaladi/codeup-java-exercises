@@ -111,31 +111,48 @@ public class MethodsExercises {
         Use the .random method of the java.lang.Math class to generate random numbers.
     */
 
-        public static void chooseDice() {
-            Scanner scanner = new Scanner(System.in);
-            System.out.println("Choose number of sides on dice: ");
-            int n = scanner.nextInt();
+    public static void chooseDice() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Choose number of sides on dice: ");
+        int n = scanner.nextInt();
 
-            Scanner scanned = new Scanner(System.in);
-            System.out.println("Throw dice?: [y/N]");
-            String response = scanned.nextLine();
+        Scanner scanned = new Scanner(System.in);
+        System.out.println("Throw dice?: [y/N]");
+        String response = scanned.nextLine();
+        int counter = 0;
 
-            if (response.equals("y")){
-                int index = 0;
-                do {
+        if (response.equals("y")) {
+            int index = 0;
+            counter += 1;
+            do {
                 index = (int) Math.floor((n * Math.random() + 1) * 2);
                 System.out.println(index);
-                }
-                while (index != n); // stops rolling dice when index = sides chosen
-                // note: if playing craps then index != 2, 3, or 12 would mean you lose
-                // note 2: if playing craps then a 7 or 11 means you win
-
-            } else if (response.equals("n")) {
-                System.out.println("This table is for high stakes only...");
+                counter++;
             }
+            while (counter <= 2); // stops rolling dice when index = sides chosen
+            // note: if playing craps then index != 2, 3, or 12 would mean you lose
+            // note 2: if playing craps then a 7 or 11 means you win
+            recurse();
+
+        } else if (response.equals("n")) {
+            System.out.println("This table is for high stakes only...");
         }
-        // note 3: how would you limit rolls to 2 attempts only?
+    }
+
+    public static void recurse() {
+        Scanner repeater = new Scanner(System.in);
+        System.out.println("Would you like to continue?: [y/N]");
+        String answer = repeater.next().toLowerCase(Locale.ROOT);
+        if (answer.equals("y")) {
+            chooseDice();
+        } else if (answer.equals("n")) {
+            System.out.println("Cashing out. Good day...");
+        }
+    }
+
+    // note 3: how would you limit rolls to 2 attempts only?
+    // note 4: made dice roll stop at 2 rolls by creating a counter and having the counter indicate when to stop rolls
+    // note 5: used new recursion method to continue dice rolling if desired
 
 
-
-    } // <---------- end of class
+} // <---------- end of class
