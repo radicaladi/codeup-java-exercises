@@ -6,7 +6,7 @@ public class Movie {
     private String category;
 
     // method
-    public String getMovie() {
+    public String getTitle() {
         return this.name;
     }
 
