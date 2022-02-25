@@ -4,16 +4,16 @@ public class Rectangle {
     protected double length;
     protected double width;
 
-    public double rectangle (double length, double width) {
+    public void rectangle (double length, double width) {
         this.length = length;
         this.width = width;
     }
 
     public double getPerimeter() {
-        return length * 2 + width * 2;
+        return this.length * 2 + this.width * 2;
     }
 
     public double getArea() {
-        return length * width;
+        return this.length * this.width;
     }
 }
