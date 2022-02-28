@@ -11,6 +11,11 @@ public class ShapesTest {
         System.out.println("spaß.getArea() = " + spaß.getArea());
         System.out.println("spaß.getPerimeter() = " + spaß.getPerimeter());
 
+        Circle himmel = new Circle(14);
+        double hc = himmel.getCircumference();
+        double ha = himmel.getArea();
+        System.out.printf("himmel.getCircumference() = %.2f\n", hc);
+        System.out.printf("himmel.getArea() = %.2f\n", ha);
     }
 
 }
