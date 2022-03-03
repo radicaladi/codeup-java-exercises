@@ -1,4 +1,6 @@
-import util.Input;;
+package grocery;
+
+import util.Input;
 
 public class GroceryListApplication {
 
