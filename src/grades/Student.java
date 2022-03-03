@@ -1,5 +1,6 @@
 package grades;
 
+// ArrayList requires import java util
 import java.util.ArrayList;
 
 public class Student {
