@@ -40,10 +40,12 @@ public class GradesApplication {
         boolean loop = true; // continues until user exits main menu
         do {
             // main menu
+            System.out.println();
             System.out.println("Welcome admin, ");
             System.out.println();
             System.out.println("Please select an option: \n" +
-                    "0 - Exit \n1 - View a Student's Information \n2 - View Class Average\n");
+                    "0 - Exit \n1 - View a Student's Information \n2 - All Student Grades \n" +
+                    "3 - View Class Average");
             int adminChoice = adminInput.getInt();
             System.out.println();
 
@@ -81,7 +83,19 @@ public class GradesApplication {
                 while (studentLoop); // catches any user error and loops option 1 on error
 
             }
-            else if (adminChoice == 2) // calculates class averages and prints to console
+            else if (adminChoice == 2) // prints all student grades to console
+            {
+                for (String student : students.keySet()){
+                    System.out.printf("Name: %s%nGrades: %s%n", students.get(student).getName(), students.get(student).getStudentGrades());
+                }
+                System.out.println();
+                System.out.println("Would you like to continue? [y/n]"); // loops option 1 or exits to main menu
+                loop = adminInput.yesNo();
+                if (!loop) {                                            // breaks loop, displays message, exits program
+                    System.out.println("powering off...");
+                }
+            }
+            else if (adminChoice == 3) // calculates class averages and prints to console
             {
                 double classAvg = 0;
                 for (String student : students.keySet()){
@@ -92,6 +106,9 @@ public class GradesApplication {
                 System.out.println();
                 System.out.println("Would you like to continue? [y/n]"); // loops to main menu or exits program
                 loop = adminInput.yesNo();
+                if (!loop) {                                            // breaks loop, displays message, exits program
+                    System.out.println("powering off...");
+                }
             }
         }
         while (loop);//<--- while-loop end
