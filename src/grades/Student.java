@@ -4,8 +4,8 @@ package grades;
 import java.util.ArrayList;
 
 public class Student {
-    private String studentName;
-    private ArrayList<Integer> studentGrades;
+    private final String studentName;
+    private final ArrayList<Integer> studentGrades;
 
     // constructor
     public Student (String name){
@@ -27,7 +27,7 @@ public class Student {
     public double getGradeAverage() {
         double total = 0;
         double avg;
-        for (Integer studentGrade : studentGrades) total = total + studentGrade;
+        for (int studentGrade : studentGrades) total = total + studentGrade;
         avg = total / studentGrades.size();
         return avg;
 // traditional for-loop:
