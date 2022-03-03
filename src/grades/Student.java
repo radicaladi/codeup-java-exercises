@@ -24,16 +24,26 @@ public class Student {
 
     // returns the average of the students grades
     public double getGradeAverage() {
-        int total = 0;
-        int avg;
+        double total = 0;
+        double avg;
         for (Integer studentGrade : studentGrades) total = total + studentGrade;
         avg = total / studentGrades.size();
-        System.out.println("Student Grade Average: " + avg);
         return avg;
 // traditional for-loop:
 //        for(int i = 0; i<studentGrades.size(); i++)
 //            total = total+studentGrades.get(i);
 //        avg = total / studentGrades.size();
 //        System.out.println("The Average IS:" + avg);
+    }
+
+    public static void main(String[] args){
+        Student Markus = new Student("Markus");
+        System.out.println(Markus.getName()); // Markus
+        Markus.addGrade(80);
+        Markus.addGrade(78);
+        Markus.addGrade(95);
+        Markus.addGrade(89);
+        System.out.println(Markus.studentGrades); // [80,78,95,89]
+        System.out.println("Student Grade Average: " + Markus.getGradeAverage()); // 85.5
     }
 }
