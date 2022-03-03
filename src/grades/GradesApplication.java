@@ -1,11 +1,12 @@
 package grades;
 
 import java.util.HashMap;
+
 import util.Input;
 
 
 public class GradesApplication {
-    public static void main(String[] args){
+    public static void main(String[] args) {
         // HashMap needs import java util
         HashMap<String, Student> students = new HashMap<>();
 
@@ -31,8 +32,8 @@ public class GradesApplication {
 
         // HashMap key:values
         students.put("JJ_onRails", Jens);
-        students.put("RubyKingKai98",Kai);
-        students.put("LlamasFortunate",Liam);
+        students.put("RubyKingKai98", Kai);
+        students.put("LlamasFortunate", Liam);
         students.put("guitarHeiress99", Maven);
 
         // student grades program
@@ -45,18 +46,15 @@ public class GradesApplication {
             System.out.println();
             System.out.println("Please select an option: \n" +
                     "0 - Exit \n1 - View a Student's Information \n2 - All Student Grades \n" +
-                    "3 - View Class Average");
+                    "3 - View Class Average\n4 - Create a CSV File");
             int adminChoice = adminInput.getInt();
             System.out.println();
 
             // response to user input
-            if (adminChoice == 0)
-            {
+            if (adminChoice == 0) {
                 System.out.println("powering off...");
                 return; // exits grades program
-            }
-            else if (adminChoice == 1)
-            {
+            } else if (adminChoice == 1) {
                 boolean studentLoop = true; // loops option 1 until user exits
                 do {
                     System.out.println("Select username: ");
@@ -82,10 +80,9 @@ public class GradesApplication {
                 }
                 while (studentLoop); // catches any user error and loops option 1 on error
 
-            }
-            else if (adminChoice == 2) // prints all student grades to console
+            } else if (adminChoice == 2) // prints all student grades to console
             {
-                for (String student : students.keySet()){
+                for (String student : students.keySet()) {
                     System.out.printf("Name: %s%nGrades: %s%n", students.get(student).getName(), students.get(student).getStudentGrades());
                 }
                 System.out.println();
@@ -94,11 +91,10 @@ public class GradesApplication {
                 if (!loop) {                                            // breaks loop, displays message, exits program
                     System.out.println("powering off...");
                 }
-            }
-            else if (adminChoice == 3) // calculates class averages and prints to console
+            } else if (adminChoice == 3) // calculates class averages and prints to console
             {
                 double classAvg = 0;
-                for (String student : students.keySet()){
+                for (String student : students.keySet()) {
                     classAvg += students.get(student).getGradeAverage();
                 }
                 classAvg /= students.size();
@@ -109,10 +105,21 @@ public class GradesApplication {
                 if (!loop) {                                            // breaks loop, displays message, exits program
                     System.out.println("powering off...");
                 }
+            } else if (adminChoice == 4)
+            {
+                System.out.println("name, github_username, average");
+                for (String student : students.keySet()) {
+                    System.out.printf("%s,%s,%.2f%n", students.get(student).getName(), student, students.get(student).getGradeAverage());
+                }
+                System.out.println();
+                System.out.println("Would you like to continue? [y/n]"); // loops to main menu or exits program
+                loop = adminInput.yesNo();
+                if (!loop) {                                            // breaks loop, displays message, exits program
+                    System.out.println("powering off...");
+                }
             }
         }
         while (loop);//<--- while-loop end
-
 
 
     } //<--- main end
