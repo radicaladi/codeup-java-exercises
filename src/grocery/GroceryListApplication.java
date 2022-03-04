@@ -1,26 +1,36 @@
 package grocery;
 
-import jdk.jfr.Category;
 import util.Input;
 
 import java.util.HashMap;
+import java.util.Map;
+import java.util.TreeMap;
 
 public class GroceryListApplication {
     // method and prompts for grocery list input
-    public static void addUserGroceries(HashMap<String, Integer> Category, String categoryName, Input Input){
+    public static void addUserGroceries(HashMap<String, Integer> Category, String categoryName, Input Input) {
         System.out.printf("%nAdd an item to %s%n", categoryName);
         System.out.println("Enter item: ");
         String itemInput = Input.getString();
-        System.out.printf("Add a quantity of %s", itemInput);
+        System.out.printf("Add a quantity of %s:%n", itemInput);
         int itemQuantity = Input.getInt();
         addItems(Category, itemInput, itemQuantity);
         System.out.printf("%nYour %s list:%n", categoryName);
         System.out.println();
+        sorting(Category);
+        System.out.println();
     }
 
     // adds item to list
-    public static void addItems(HashMap<String, Integer> category, String item, int quantity){
+    public static void addItems(HashMap<String, Integer> category, String item, int quantity) {
         category.put(item, quantity);
+    }
+
+    // sorts category items a-z
+    public static void sorting(HashMap<String, Integer> Category) {
+        TreeMap<String, Integer> sorted = new TreeMap<>(Category);
+        for (Map.Entry<String, Integer> entry : sorted.entrySet())
+            System.out.println(entry.getKey() + " x " + entry.getValue());
     }
 
     // client side
@@ -51,21 +61,23 @@ public class GroceryListApplication {
                     "5 - Other\n"
             );
             int selection = input.getInt();
-            switch (selection){
+
+            input.getString();             // need this otherwise addUserGroceries won't take a string input (the item to input)
+            switch (selection) {
                 case 1:
-                    System.out.println("something breads");
+                    addUserGroceries(Breads, "Breads", input);
                     break;
                 case 2:
-                    System.out.println("something fruits");
+                    addUserGroceries(Fruits, "Fruits", input);
                     break;
                 case 3:
-                    System.out.println("something vegetables");
+                    addUserGroceries(Vegetables, "Vegetables", input);
                     break;
                 case 4:
-                    System.out.println("something meats");
+                    addUserGroceries(Meats, "Meats", input);
                     break;
                 case 5:
-                    System.out.println("something other");
+                    addUserGroceries(Other, "Other", input);
                     break;
                 default:
                     System.out.println("Invalid option");
@@ -73,6 +85,7 @@ public class GroceryListApplication {
         }
 
     }
+
     public static void main(String[] args) {
         GroceryListApp();
     }
