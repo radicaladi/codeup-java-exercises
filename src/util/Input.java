@@ -10,7 +10,7 @@ public class Input {
     }
 
     public String getString() {
-        return scanner.next();
+        return scanner.nextLine();
     }
 
     public boolean yesNo() {
