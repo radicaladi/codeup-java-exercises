@@ -57,6 +57,7 @@ public class GradesApplication {
             } else if (adminChoice == 1) {
                 boolean studentLoop = true; // loops option 1 until user exits
                 do {
+                    adminInput.getString(); // clears string input; fixes issue with outputting exception on getInt() input;
                     System.out.println("Select username: ");
                     System.out.println();
                     for (String key : students.keySet()) { // loops HashMap and prints usernames to console
