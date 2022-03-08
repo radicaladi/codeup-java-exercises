@@ -29,7 +29,13 @@ public class Input {
     }
 
     public int getInt() {
-        return Integer.parseInt(getString());
+        try {
+            return Integer.parseInt(getString());
+        }
+        catch (Exception NumberFormatException) {
+            System.out.println("given input cannot be parsed as an int! " + NumberFormatException.getMessage());
+            return 0;
+        }
     }
 
     public double getDouble(double min, double max) {
@@ -43,7 +49,13 @@ public class Input {
     }
 
     public double getDouble() {
-        return Double.parseDouble(getString());
+        try {
+            return Double.parseDouble(getString());
+        }
+        catch (Exception NumberFormatException) {
+            System.out.println("given input cannot be parsed as a double! " + NumberFormatException.getMessage());
+            return 0;
+        }
     }
 
 }
