@@ -76,7 +76,7 @@ public class GradesApplication {
                         System.out.println("Would you like to continue? [y/n]"); // loops option 1 or exits to main menu
                         studentLoop = adminInput.yesNo();
                     } catch (Exception e) {
-                        System.out.println("Sorry, that user does not exist...");
+                        System.out.println("Sorry, that user does not exist... \npress [ enter ]");
                     }
                 }
                 while (studentLoop); // catches any user error and loops option 1 on error
