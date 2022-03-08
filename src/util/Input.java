@@ -29,7 +29,7 @@ public class Input {
     }
 
     public int getInt() {
-        return scanner.nextInt();
+        return Integer.parseInt(getString());
     }
 
     public double getDouble(double min, double max) {
@@ -43,7 +43,7 @@ public class Input {
     }
 
     public double getDouble() {
-        return scanner.nextDouble();
+        return Double.parseDouble(getString());
     }
 
 }
