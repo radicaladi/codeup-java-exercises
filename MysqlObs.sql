@@ -18,4 +18,7 @@
     -- outputs an incredible amount of help(?) data; 701 rows
     -- formatted makes it easier to read but still incredibly long
 
---
+-- SELECT help_topic_id, help_category_id, url FROM mysql.help_topic
+    -- also prints an incredible amount of help(?) data but appears to be more specific
+    -- formatted reduces space taken up but remains 701 rows long
+    -- insane amount of rows output for anyone to read
