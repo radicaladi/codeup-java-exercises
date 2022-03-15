@@ -22,3 +22,6 @@
     -- also prints an incredible amount of help(?) data but appears to be more specific
     -- formatted reduces space taken up but remains 701 rows long
     -- insane amount of rows output for anyone to read
+
+-- pager less -~SFX
+    -- formats commands like the 4 above into a conveniently readable format but still quite long
