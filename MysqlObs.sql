@@ -1,0 +1,6 @@
+-- Starting up MySQL from terminal
+    -- mysql.server status // checks if it is running
+    -- mysql.server start // starts instance of mysql on local
+    -- mysql.server restart // restarts mysql
+    -- mysql.server stop // discontinues running of mysql
+    -- mysql -u root -p // how you log into mysql BUT must make sure mysql is started first
